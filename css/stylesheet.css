@@ -1,0 +1,20 @@
+
+#top {
+width:100px;
+height:30px;
+margin:15px;
+background-color:#363636;
+text-align:center;
+color:#ff435e;
+	
+	border-width: 3px;
+    border-style: solid;
+	border-color: #ff435e;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  font-size: 150%;
+  position: fixed;
+  right: 0;
+}
+
