@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>Подборки Кино</title>
+<meta charset="utf-8" name="keywords" content="кино,обзор,рейтинг 250 лучших фильмов">
+<link rel="stylesheet" type="text/css" href="style11.css" />
+
+<title>Документ без названия</title>
+<script src="jquery-1.7.2.min.js"></script>
+<script>
+
+/*
+
+HW Slider - простой слайдер на jQuery. 
+
+Настройки скрипта:
+
+hwSlideSpeed - Скорость анимации перехода слайда.
+hwTimeOut - время до автоматического перелистывания слайдов.
+hwNeedLinks - включает или отключает показ ссылок "следующий - предыдущий". Значения true или false
+
+Подробнее на http://heavenweb.ru/
+
+*/
+(function ($) {
+var hwSlideSpeed = 700;
+var hwTimeOut = 180000;
+var hwNeedLinks = true;
+
+$(document).ready(function(e) {
+	$('.slide').css(
+		{"position" : "absolute",
+		 "top":'0', "left": '0'}).hide().eq(0).show();
+	var slideNum = 0;
+	var slideTime;
+	slideCount = $(".slider .slide").size();
+	var animSlide = function(arrow){
+		clearTimeout(slideTime);
+		$('.slide').eq(slideNum).fadeOut(hwSlideSpeed);
+		if(arrow == "next"){
+			if(slideNum == (slideCount-1)){slideNum=0;}
+			else{slideNum++}
+			}
+		else if(arrow == "prew")
+		{
+			if(slideNum == 0){slideNum=slideCount-1;}
+			else{slideNum-=1}
+		}
+		else{
+			slideNum = arrow;
+			}
+		$('.slide').eq(slideNum).fadeIn(hwSlideSpeed, rotator);
+		$(".control-slide.active").removeClass("active");
+		$('.control-slide').eq(slideNum).addClass('active');
+		}
+if(hwNeedLinks){
+var $linkArrow = $('<a class="prewbutton" href="#">&lt;</a><a class="nextbutton" href="#">&gt;</a>')
+	.prependTo('.slider');		
+	$('.nextbutton').click(function(){
+		animSlide("next");
+		return false;
+		})
+	$('.prewbutton').click(function(){
+		animSlide("prew");
+		return false;
+		})
+}
+	var $adderSpan = '';
+	$('.slide').each(function(index) {
+			$adderSpan += '<span class = "control-slide">' + index + '</span>';
+		});
+	$('<div class ="sli-links">' + $adderSpan +'</div>').appendTo('.slider-wrap');
+	$(".control-slide:first").addClass("active");
+	$('.control-slide').click(function(){
+	var goToNum = parseFloat($(this).text());
+	animSlide(goToNum);
+	});
+	var pause = false;
+	var rotator = function(){
+			if(!pause){slideTime = setTimeout(function(){animSlide('next')}, hwTimeOut);}
+			}
+	$('.slider-wrap').hover(	
+		function(){clearTimeout(slideTime); pause = true;},
+		function(){pause = false; rotator();
+		});
+	rotator();
+});
+})(jQuery);
+
+</script>
+
+</head>
+<body>
+<div id="header">
+<div id="mainheader">Подборки Кино</div>
+</div>	
+<div id="content">
+<div class="content-title_1">Приключения</div>
+
+
+
+
+<div class="slider-wrap">
+  <div class="slider">
+    <a class="prewbutton" href="#">&lt;</a>
+    <a class="nextbutton" href="#">></a>
+    <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
+      <iframe width="990" height="480" src="https://www.youtube.com/embed/Jxvak9bwdvk" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
+      <iframe width="990" height="480" src="https://www.youtube.com/embed/XX0zmgbcMm8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
+      <iframe width="990" height="480" src="https://www.youtube.com/embed/OCtt7giwbi0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="slide" style="position: absolute; top: 0px; left: 0px; display: block">
+      <iframe width="990" height="480" src="https://www.youtube.com/embed/4BE5u9itrsY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="slide" style="position: absolute; top: 0px; left: 0px; display: none">
+     <iframe width="990" height="480" src="https://www.youtube.com/embed/cG11JBFrYHY" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+</div>
+
+  
+
+
+
+
+
+</div>
+
+<div class="footer">
+<div class="footer-list">
+<ul>
+   <li><a href="Novinki.html">Новинки</a></li>
+   <li class="slash">/</li>
+   <li><a href="Reiting.html">Топ-100</a></li>
+   <li class="slash">/</li>
+   <li><a href="Genres.html">Жанры</a></li>
+   <li class="slash">/</li>
+   <li><a href="index.html">На Главную</a></li>  
+</ul>
+</div>
+<p> ©FILMOZOR Berezin Anton,Varvarina Anastasiya. 2016г.</p>
+</div>
+
+
+
+</body>
+</html>

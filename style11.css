@@ -1,0 +1,203 @@
+﻿@font-face {
+    
+font-family: 'Nautilus Pompilius';
+    
+src: local('fonts/Nautilus Pompilius'), 
+local('fonts/NautilusPompilius'), 
+url('fonts/nautiluspompilius.woff2') format('woff2'), 
+url('fonts/nautiluspompilius.woff') format('woff'), 
+url('fonts/nautiluspompilius.ttf') format('truetype');
+   
+ font-weight: 400;
+    
+font-style: normal;
+
+}
+
+@font-face {
+	    font-family: a_machinaortoshtregular;
+	    src: local("a_machinaortoshtregular"),
+         url(fonts/a_machinaortoshtregular.ttf);
+  }
+body 
+{
+background-image: url(images/1.jpg);           
+background-repeat: no-repeat;  
+background-size: 100%;  
+background-attachment: fixed; 
+margin:0;  
+background-position: 50% 0%;
+background-color: #000000 ;
+}
+
+
+
+
+#mainheader{font-size: 100px;
+color: #E0FFFF; 
+text-align: center;
+font-family:a_machinaortoshtregular;
+padding: 30px 30px 0px 30px;
+font-size: 190px;
+letter-spacing: 10px;
+text-shadow: #000000 1px 1px 0, #cad5e2 2px 2px 0, 
+                 #87CEEB 6px 6px 0, #cad5e2 4px 4px 0, 
+                 #cad5e2 7px 7px 0;
+
+
+
+}
+
+.footer{
+width:100%; 
+padding-top: 400px;
+color: red;
+text-align:center; 
+background-image: url(images/footer1222.png); 
+background-repeat: no-repeat;      
+background-size: 100%; 
+display: inline-block;
+}
+.footer-list{ 
+ margin-top: 10px;
+text-align: center; 
+
+list-style-type: none;
+} 
+.footer-list li{ 
+font-family: FANTASY; 
+color: #4B0082; 
+text-decoration: none; 
+display: inline;
+list-style-type: none; 
+font-size: 22px; 
+padding: 0 20px;
+} 
+.footer-list a{color: #4B0082; text-shadow: #FFFFFF 0 0 15px; }
+.footer p
+{   font-family: SEGOE PRINT;
+    font-size: 20px;
+    color: #4B0082;
+    text-align: center;
+    margin-top:10px; 
+text-shadow: #FFFFFF 0 0 15px; 
+}
+.slash
+{
+    font-size: 20px;
+    color: red;
+    padding: 0 20px;
+
+}
+
+#content
+{ 
+background-size: 100%;  
+background:rgba(255,255,255,0.75);
+width:75%; 
+margin:0 auto;
+padding: 40px;
+text-align: center;
+font-family: Verdana;
+font-size:40px;
+color:red;
+border-radius: 10px;
+font-size:40px; 
+text-decoration:none; 
+color:#DC143C; 
+font-family:ms sans serif; 
+text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black; 
+}
+.content-title_1{margin-bottom:20px;}
+.footer-list a:link,a:visited {
+	
+color:#4B0082;
+
+text-decoration:none;
+
+}
+
+
+.footer-list a:hover,a:active {
+
+color:#599100;
+	
+text-decoration:underline;
+
+}
+.slider-wrap{ /* Оболочка слайдера и кнопок */
+    width:1010px; margin: 0 auto;
+    }
+.slider{ /* Оболочка слайдера */
+    width:990px;
+    height:480px;
+    overflow: hidden;
+    border:#eee solid 10px;
+    position:relative;
+    }
+.slide{ /* Слайд */
+    width:100%;
+    height:100%;
+    }
+.sli-links{ /* Кнопки смены слайдов */
+    margin-top:10px;
+    text-align:center;}
+.sli-links .control-slide{
+    margin:2px;
+    display:inline-block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    text-indent:-9999px;
+    background:url(radioBg.png) center bottom no-repeat;}
+.sli-links .control-slide:hover{
+    cursor:pointer;
+    background-position:center center;}
+.sli-links .control-slide.active{
+    background-position:center top;}
+.prewbutton, .nextbutton{ /* Ссылка "Следующий" и "Педыдущий" */
+    display:block;
+    width:15px;
+    height:100%;
+    position:absolute;
+    top:0;
+    overflow:hidden;
+    text-indent:-999px;
+    background:url(arrowBg.png) left center no-repeat;
+    opacity:0.8;
+    z-index:3;
+    outline:none !important;}
+.prewbutton{left:10px;}
+.nextbutton{
+    right:10px;
+    background:url(arrowBg.png) right center no-repeat;}
+.prewbutton:hover, .nextbutton:hover{
+    opacity:1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
